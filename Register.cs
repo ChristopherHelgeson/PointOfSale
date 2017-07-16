@@ -8,16 +8,15 @@ namespace PointOfSale
 {
     class Register
     {
-        public DisplayInventory()
-        {
-            new Products a = new Products();
-        }
-        public DisplayOrder()
-        {
+        //public DisplayInventory()
+        //{
+        //    new Products a = new Products();
+        //}
+        //public DisplayOrder()
+        //{
 
-        }
-        public DisplayReceipt();
+        //}
+        //public DisplayReceipt();
 
     }
-    pu
 }

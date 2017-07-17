@@ -1,2 +1,0 @@
-# PointOfSale
-# PointOfSale

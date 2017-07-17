@@ -77,5 +77,75 @@ namespace PointOfSale
         {
             return quantity;
         }
+        public void getPayment()
+        {
+            Console.WriteLine("Which payement would you like to use?");
+            Console.WriteLine("Debit,Cash or Check?");
+            string userPayment = Console.ReadLine();
+            Console.WriteLine();
+            // return userPayment;
+
+
+            if (userPayment == "Debit" || userPayment == "debit")
+            {
+                Console.WriteLine("Please enter your card number");
+                string cardNumber = Console.ReadLine();
+                Console.WriteLine("Please enter your Expiration date");
+                string Expiration = Console.ReadLine();
+                Console.WriteLine("Please enter your CVC number");
+                string CVC = Console.ReadLine();
+
+                outputCustOrder();
+                Console.WriteLine();
+                Console.WriteLine("Paid by Debit Card :");
+                Console.WriteLine("You owe 0 dollars! Thank You for shopping at Grand Circus!");
+
+
+            }
+            if (userPayment == "Check" || userPayment == "check ")
+            {
+                Console.WriteLine("Please insert your check number");
+                string checkNumber = Console.ReadLine();
+                Console.WriteLine();
+                outputCustOrder();
+                Console.WriteLine("Paid by Check");
+                Console.WriteLine("You owe 0 dollars! Thank You for shopping at The Grand World!");
+
+            }
+
+            if (userPayment == "Cash" || userPayment == "cash")
+            {
+                Console.WriteLine("Please insert the amount of cash you have");
+                double customerWallet = Double.Parse(Console.ReadLine());
+
+                // Console.WriteLine("Value of dangSubtotal is " + dangSubtotal);
+
+                double grandTotal = orderSubtotal * 1.06;
+                double exactChange = customerWallet - grandTotal;
+
+                outputCustOrder();
+                Console.WriteLine("Your change is: " + exactChange);
+
+
+                /*
+                if (customerWallet --== orderSubtotal)
+                {
+                    outputCustOrder();
+                    Console.WriteLine("Paid by Cash:");
+                    Console.WriteLine();
+                    Console.WriteLine("You owe 0 dollars! Thank You for shopping at The Grand World!");
+                }
+
+                if (customerWallet > orderSubtotal)
+                {
+                    double exactChange = customerWallet - orderSubtotal;
+                    Console.WriteLine($"Here is your  change: {exactChange}");
+                    Console.WriteLine("Cash is dispensed below the scanner!");
+                    Console.WriteLine("You oue 0 dollars! Thank You for shopping at The Grand World!");
+
+                }
+               */
+            }
+        }
     }
 }

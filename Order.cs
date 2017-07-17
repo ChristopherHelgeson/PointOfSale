@@ -41,9 +41,9 @@ namespace PointOfSale
             for (int i = 0; i < order.Count(); i++)
             {
                 int currentIndex = order[i].getIndex();
-                string currentName = products[i].getName();
+                string currentName = products[currentIndex].getName();
                 int currentQty = order[i].getQty();
-                double currentPrice = products[i].getPrice();
+                double currentPrice = products[currentIndex].getPrice();
                 double itemSubtotal = currentPrice * currentQty;
                 Console.WriteLine($"{currentName}\t\t{currentQty}\t{currentPrice.ToString("0.00")}\t{itemSubtotal.ToString("0.00")}");
                 orderSubtotal = orderSubtotal + itemSubtotal;

@@ -33,7 +33,7 @@ namespace PointOfSale
 
         public List<Product> buildProduct()
         {
-            Product a = new Product("Apple", "Produce", "Fruit", 1.00);
+            Product a = new Product("Batman", "Produce", "Fruit", 100.00);
             products.Add(a);
             Product b = new Product("Banana", "Produce", "Fruit", 0.50);
             products.Add(b);

@@ -82,6 +82,7 @@ namespace PointOfSale
             Console.WriteLine("Which payement would you like to use?");
             Console.WriteLine("Debit,Cash or Check?");
             string userPayment = Console.ReadLine();
+            userPayment = userPayment.Trim();
             Console.WriteLine();
             // return userPayment;
 
@@ -102,7 +103,7 @@ namespace PointOfSale
 
 
             }
-            if (userPayment == "Check" || userPayment == "check ")
+            else if (userPayment == "Check" || userPayment == "check")
             {
                 Console.WriteLine("Please insert your check number");
                 string checkNumber = Console.ReadLine();
@@ -113,7 +114,7 @@ namespace PointOfSale
 
             }
 
-            if (userPayment == "Cash" || userPayment == "cash")
+            else if (userPayment == "Cash" || userPayment == "cash")
             {
                 Console.WriteLine("Please insert the amount of cash you have");
                 double customerWallet = Double.Parse(Console.ReadLine());
@@ -122,9 +123,9 @@ namespace PointOfSale
 
                 double grandTotal = orderSubtotal * 1.06;
                 double exactChange = customerWallet - grandTotal;
-
+                string change = exactChange.ToString("0.00");
                 outputCustOrder();
-                Console.WriteLine("Your change is: " + exactChange);
+                Console.WriteLine("\t\tChange: " + change);
 
 
                 /*

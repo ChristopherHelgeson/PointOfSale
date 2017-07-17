@@ -37,6 +37,7 @@ namespace PointOfSale
             if ((answer == "Y") || (answer == "y"))
             {
                 sale = true;
+                P.printProductList();
             }
             else if ((answer == "N") || (answer == "n"))
             {
@@ -87,17 +88,10 @@ namespace PointOfSale
 
         public void Payment()
         {
-            Console.Clear();
-            Console.Write("Enter payment type (cash/check/card): ");
-            string payType = Console.ReadLine();
-
-            Console.WriteLine("\nPayment made with your " + payType);
-
-            Console.WriteLine("Here's your reciept.");
-            //requestPaymentType();
-            //displayReceipt();
+            
+            O.getPayment();
             newSale();
-            //P.printProductList();
+            
         }
     }
 }

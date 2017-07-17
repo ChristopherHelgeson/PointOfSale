@@ -10,7 +10,7 @@ namespace PointOfSale
     {
         static void Main(string[] args)
         {
-            POSapp pos = new PointOfSale.POSapp();
+            POSapp pos = new POSapp();
         }
     }
 }
